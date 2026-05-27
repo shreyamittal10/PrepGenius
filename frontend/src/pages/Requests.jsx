@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import socket from "../utils/socket";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://localhost:8000/api";
+const API = "https://prepgenius-backend-6jzn.onrender.com";
 
 const Requests = () => {
   const [requests, setRequests] = useState([]);

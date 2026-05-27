@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://prepgenius-backend-6jzn.onrender.com";
 
 export const API_PATHS = {
   AUTH: {

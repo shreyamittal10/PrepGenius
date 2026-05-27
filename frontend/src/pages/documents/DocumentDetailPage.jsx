@@ -49,7 +49,7 @@ const DocumentDetailPage = () => {
     }
 
     const baseUrl =
-      process.env.REACT_APP_API_URL || "http://localhost:8000";
+      process.env.REACT_APP_API_URL || "https://prepgenius-backend-6jzn.onrender.com";
 
     return `${baseUrl}${filePath.startsWith("/") ? "" : "/"}${filePath}`;
   };
