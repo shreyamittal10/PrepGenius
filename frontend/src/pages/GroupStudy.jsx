@@ -39,7 +39,7 @@ const GroupStudy = () => {
     try {
       setLoading(true);
 
-      const res = await axios.get(`${API}/groups`, {
+      const res = await axios.get(`${API}/api/groups`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -74,7 +74,7 @@ const GroupStudy = () => {
 
     try {
       await axios.post(
-        `${API}/groups`,
+        `${API}/api/groups`,
         { name: groupName },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -101,7 +101,7 @@ const GroupStudy = () => {
       await Promise.all(
         selected.map(async (userId) => {
           return axios.post(
-            `${API}/groups/${groupId}/request`,
+            `${API}/api/groups/${groupId}/request`,
             { userId },
             {
               headers: {
@@ -136,7 +136,7 @@ const GroupStudy = () => {
   const removeMember = async (groupId, userId) => {
     try {
       await axios.delete(
-        `${API}/groups/${groupId}/members/${userId}`,
+        `${API}/api/groups/${groupId}/members/${userId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -155,7 +155,7 @@ const GroupStudy = () => {
     if (!window.confirm("Delete this group?")) return;
 
     try {
-      await axios.delete(`${API}/groups/${groupId}`, {
+      await axios.delete(`${API}/api/groups/${groupId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

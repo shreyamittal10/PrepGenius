@@ -14,7 +14,7 @@ const Requests = () => {
   // ✅ FETCH REQUESTS
   const fetchRequests = async () => {
     try {
-      const res = await axios.get(`${API}/groups/requests`, {
+      const res = await axios.get(`${API}/api/groups/requests`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setRequests(res.data);
@@ -52,7 +52,7 @@ const Requests = () => {
   const accept = async (id) => {
     try {
       await axios.put(
-        `${API}/groups/requests/${id}/accept`,
+        `${API}/api/groups/requests/${id}/accept`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -67,7 +67,7 @@ const Requests = () => {
   const reject = async (id) => {
     try {
       await axios.put(
-        `${API}/groups/requests/${id}/reject`,
+        `${API}/api/groups/requests/${id}/reject`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

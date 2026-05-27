@@ -14,7 +14,7 @@ const NotificationBell = () => {
   // ✅ Fetch notification count
   const fetchCount = async () => {
     try {
-      const res = await axios.get(`${API}/groups/requests`, {
+      const res = await axios.get(`${API}/api/groups/requests`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
