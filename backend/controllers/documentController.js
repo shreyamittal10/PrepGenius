@@ -28,7 +28,8 @@ export const uploadDocument = async (req, res, next) => {
       });
     }
 
-    const baseUrl = `http://localhost:${process.env.PORT || 8000}`;
+    // const baseUrl = `http://localhost:${process.env.PORT || 8000}`;
+     const baseUrl = "https://prepgenius-backend-6jzn.onrender.com";
     const fileUrl = `${baseUrl}/uploads/documents/${req.file.filename}`;
 
     const newDocument = await Document.create({
