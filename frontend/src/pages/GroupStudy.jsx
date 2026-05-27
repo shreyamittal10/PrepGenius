@@ -54,7 +54,7 @@ const GroupStudy = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get(`${API}/users/all`, {
+      const res = await axios.get(`${API}/api/users/all`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
